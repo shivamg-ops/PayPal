@@ -1,0 +1,135 @@
+
+.paypal-header {
+  width: 100%;
+  min-height: 80px;
+  padding: 0 clamp(20px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Logo */
+
+
+.paypal-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 140px;
+  text-decoration: none;
+}
+
+.paypal-logo img {
+  display: block;
+  width: 140px;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+
+
+/* Navigation */
+.paypal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.5vw, 34px);
+}
+
+.paypal-nav a {
+  color: #001435;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.paypal-nav a:hover {
+  color: #0070e0;
+}
+
+/* Action buttons */
+.paypal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.paypal-actions a {
+  min-height: 42px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #003087;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn {
+  background: #fff;
+  color: #003087;
+}
+
+.login-btn:hover {
+  background: #f0f6ff;
+}
+
+.signup-btn {
+  background: #003087;
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background: #001f5b;
+}
+
+/* Tablet and mobile */
+@media (max-width: 760px) {
+  .paypal-header {
+    min-height: 70px;
+    padding: 12px 18px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .paypal-logo img {
+    width: 105px;
+  }
+
+  .paypal-actions {
+    margin-left: auto;
+    gap: 7px;
+  }
+
+  .paypal-actions a {
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .paypal-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 10px 0 4px;
+  }
+
+  .paypal-nav a {
+    font-size: 14px;
+  }
+}
