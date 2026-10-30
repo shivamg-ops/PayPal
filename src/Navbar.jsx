@@ -1,41 +1,36 @@
-
 import React from "react";
 import "./Navbar.css";
 
 function Navbar() {
   return (
-    <header className="paypal-header">
-     
-<a href="/" className="paypal-logo" aria-label="PayPal home">
-  <img
-    src="https://www.paypalobjects.com/marketing/web/logos/paypal-wordmark-color_new.svg"
-    alt="PayPal"
-    onError={(e) => {
-      e.currentTarget.src =
-        "https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png";
-    }}
-  />
-</a>
-
-
-
-      <nav className="paypal-nav">
-        <a href="#personal">Personal</a>
-        <a href="#business">Business</a>
-        <a href="#developer">Developer</a>
-        <a href="#help">Help</a>
-      </nav>
-
-      <div className="paypal-actions">
-        <a className="login-btn" href="#login">
-          Log In
+    <nav className="navbar">
+      {/* Left side: Logo + Links */}
+      <div className="nav-left">
+        <a href="/" className="logo">
+          <img
+            src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+            alt="PayPal"
+          />
         </a>
 
-        <a className="signup-btn" href="#signup">
+        <div className="nav-links">
+          <a href="#personal">Personal ▾</a>
+          <a href="#business">Business ▾</a>
+          <a href="#partners">Partners ▾</a>
+          <a href="#useful">Useful Info ▾</a>
+        </div>
+      </div>
+
+      {/* Right side: Login & Sign Up buttons */}
+      <div className="nav-right">
+        <a href="#login" className="btn-login">
+          Log In
+        </a>
+        <a href="#signup" className="btn-signup">
           Sign Up
         </a>
       </div>
-    </header>
+    </nav>
   );
 }
 
